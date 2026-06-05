@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Model weights are hosted on Hugging Face (https://huggingface.co/pfnet/GenerRNA),
+# they are intentionally NOT committed to this code/docs mirror.
+*.pt
+*.bin
+*.safetensors
+model.pt.part-*
+
+# OS / editor cruft
+.DS_Store

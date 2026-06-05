@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use GenerRNA in your research, please cite the article below."
+title: "GenerRNA: A generative pre-trained language model for de novo RNA design"
+abstract: >-
+  GenerRNA is a generative pre-trained language model for de novo RNA design,
+  based on a Transformer decoder-only architecture. It generates novel RNA
+  sequences in a zero-shot manner or after fine-tuning, without requiring prior
+  structural information.
+type: software
+authors:
+  - family-names: Zhao
+    given-names: Yichong
+    affiliation: "The University of Tokyo"
+  - family-names: Oono
+    given-names: Kenta
+    affiliation: "Preferred Networks, Inc."
+  - family-names: Takizawa
+    given-names: Hiroki
+    affiliation: "Preferred Networks, Inc."
+  - family-names: Kotera
+    given-names: Masaaki
+    affiliation: "Preferred Networks, Inc."
+    email: kotera@preferred.jp
+repository-code: "https://huggingface.co/pfnet/GenerRNA"
+url: "https://huggingface.co/pfnet/GenerRNA"
+license: MIT
+keywords:
+  - RNA design
+  - de novo design
+  - generative model
+  - language model
+  - transformer
+  - RNA generation
+  - computational biology
+  - bioinformatics
+  - drug discovery
+preferred-citation:
+  type: article
+  title: "GenerRNA: A generative pre-trained language model for de novo RNA design"
+  authors:
+    - family-names: Zhao
+      given-names: Yichong
+    - family-names: Oono
+      given-names: Kenta
+    - family-names: Takizawa
+      given-names: Hiroki
+    - family-names: Kotera
+      given-names: Masaaki
+  journal: "PLOS ONE"
+  year: 2024
+  month: 10
+  volume: 19
+  issue: 10
+  start: "e0310814"
+  doi: "10.1371/journal.pone.0310814"
+  publisher:
+    name: "Public Library of Science"
