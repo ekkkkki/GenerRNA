@@ -1,6 +1,6 @@
 # GenerRNA
 
-> GenerRNA is a generative pre-trained language model for de novo RNA design — a decoder-only Transformer (GPT-style) that generates novel RNA sequences without requiring structural input, functional labels, or sequence alignments. Published in PLOS ONE (2024). Developed by Preferred Networks, Inc. and The University of Tokyo. To our knowledge, it is the first application of a generative language model to RNA generation.
+> GenerRNA is a generative pre-trained language model for de novo RNA design — a decoder-only Transformer (GPT-style) that generates novel RNA sequences without requiring structural input, functional labels, or sequence alignments. Published in PLOS ONE (2024). To our knowledge, it is the first application of a generative language model to RNA generation.
 
 ## Key facts
 

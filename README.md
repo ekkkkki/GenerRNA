@@ -16,7 +16,7 @@ With GenerRNA you can:
 - **Generate RNA in a zero-shot manner** to explore the RNA sequence space, or
 - **Fine-tune on your own dataset** to generate RNAs belonging to a particular family or possessing specific characteristics (e.g., high binding affinity to a target protein).
 
-> Developed by [Preferred Networks, Inc.](https://www.preferred.jp/en/) and The University of Tokyo. Introduced in *PLOS ONE* (2024): [GenerRNA: A generative pre-trained language model for *de novo* RNA design](https://doi.org/10.1371/journal.pone.0310814).
+> Introduced in the peer-reviewed paper *PLOS ONE* (2024): [GenerRNA: A generative pre-trained language model for *de novo* RNA design](https://doi.org/10.1371/journal.pone.0310814).
 
 ## Links
 
@@ -67,8 +67,6 @@ GenerRNA is a **Transformer decoder-only (GPT-style) language model** trained on
 | **Framework** | PyTorch (≥ 2.0) |
 | **License** | MIT |
 | **Paper** | *PLOS ONE* 19(10):e0310814 (2024) · [doi:10.1371/journal.pone.0310814](https://doi.org/10.1371/journal.pone.0310814) |
-| **Developed by** | Preferred Networks, Inc. & The University of Tokyo |
-
 ## Intended Use & Use Cases
 
 GenerRNA is intended for **research in RNA biology, synthetic biology, and RNA-based therapeutics / drug discovery**. Typical use cases include:

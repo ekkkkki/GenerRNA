@@ -10,19 +10,14 @@ type: software
 authors:
   - family-names: Zhao
     given-names: Yichong
-    affiliation: "The University of Tokyo"
   - family-names: Oono
     given-names: Kenta
-    affiliation: "Preferred Networks, Inc."
   - family-names: Takizawa
     given-names: Hiroki
-    affiliation: "Preferred Networks, Inc."
   - family-names: Kotera
     given-names: Masaaki
-    affiliation: "Preferred Networks, Inc."
-    email: kotera@preferred.jp
-repository-code: "https://huggingface.co/pfnet/GenerRNA"
-url: "https://huggingface.co/pfnet/GenerRNA"
+repository-code: "https://github.com/ekkkkki/GenerRNA"
+url: "https://ekkkkki.github.io/GenerRNA/"
 license: MIT
 keywords:
   - RNA design

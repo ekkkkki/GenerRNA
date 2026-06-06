@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GenerRNA — A Generative Language Model for de novo RNA Design</title>
-  <meta name="description" content="GenerRNA is a generative pre-trained language model (a decoder-only Transformer) for de novo RNA design. It generates novel RNA sequences zero-shot or after fine-tuning, with no structural input required. Open-source, MIT-licensed, published in PLOS ONE (2024).">
-  <meta name="keywords" content="GenerRNA, RNA design, de novo RNA design, generative model, RNA language model, RNA generation, transformer, GPT, deep learning, computational biology, bioinformatics, drug discovery, RNA aptamer, protein-binding RNA, Preferred Networks">
+  <meta name="description" content="GenerRNA is a generative pre-trained language model (a decoder-only Transformer) for de novo RNA design. It generates novel RNA sequences zero-shot or after fine-tuning, with no structural input required. Open-source and MIT-licensed.">
+  <meta name="keywords" content="GenerRNA, RNA design, de novo RNA design, generative model, RNA language model, RNA generation, transformer, GPT, deep learning, computational biology, bioinformatics, drug discovery, RNA aptamer, protein-binding RNA, open source, fine-tuning, RNA foundation model">
   <meta name="author" content="Yichong Zhao, Kenta Oono, Hiroki Takizawa, Masaaki Kotera">
   <meta name="theme-color" content="#0b6bcb">
   <link rel="canonical" href="https://ekkkkki.github.io/GenerRNA/">
@@ -15,14 +15,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="GenerRNA — A Generative Language Model for de novo RNA Design">
-  <meta property="og:description" content="A generative pre-trained language model for de novo RNA design. Generate novel RNA sequences zero-shot or after fine-tuning. Open-source, published in PLOS ONE (2024).">
+  <meta property="og:description" content="A generative pre-trained language model for de novo RNA design. Generate novel RNA sequences zero-shot or after fine-tuning. Open-source and MIT-licensed.">
   <meta property="og:url" content="https://ekkkkki.github.io/GenerRNA/">
   <meta property="og:site_name" content="GenerRNA">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GenerRNA — A Generative Language Model for de novo RNA Design">
-  <meta name="twitter:description" content="A generative pre-trained language model for de novo RNA design. Open-source, published in PLOS ONE (2024).">
+  <meta name="twitter:description" content="A generative pre-trained language model for de novo RNA design. Open-source and MIT-licensed.">
 
   <!-- Highwire / Google Scholar citation metadata -->
   <meta name="citation_title" content="GenerRNA: A generative pre-trained language model for de novo RNA design">
@@ -51,10 +51,10 @@
     "name": "GenerRNA: A generative pre-trained language model for de novo RNA design",
     "headline": "GenerRNA: A generative pre-trained language model for de novo RNA design",
     "author": [
-      {"@type": "Person", "name": "Yichong Zhao", "affiliation": {"@type": "Organization", "name": "The University of Tokyo"}},
-      {"@type": "Person", "name": "Kenta Oono", "affiliation": {"@type": "Organization", "name": "Preferred Networks, Inc."}},
-      {"@type": "Person", "name": "Hiroki Takizawa", "affiliation": {"@type": "Organization", "name": "Preferred Networks, Inc."}},
-      {"@type": "Person", "name": "Masaaki Kotera", "affiliation": {"@type": "Organization", "name": "Preferred Networks, Inc."}}
+      {"@type": "Person", "name": "Yichong Zhao"},
+      {"@type": "Person", "name": "Kenta Oono"},
+      {"@type": "Person", "name": "Hiroki Takizawa"},
+      {"@type": "Person", "name": "Masaaki Kotera"}
     ],
     "datePublished": "2024-10-01",
     "isPartOf": {
@@ -140,9 +140,9 @@
       {"@type": "Question", "name": "How can I design RNA that binds a target protein?", "acceptedAnswer": {"@type": "Answer", "text": "Fine-tune GenerRNA on a dataset specific to your target. In the paper, GenerRNA was fine-tuned to design RNA with high binding affinity to the RNA-binding proteins ELAVL1 and SRSF1."}},
       {"@type": "Question", "name": "What data was GenerRNA trained on?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA was pre-trained on about 16 million RNA sequences (~17.4 billion nucleotides) derived from RNAcentral release 22 and deduplicated with MMseqs2 at 80% sequence identity."}},
       {"@type": "Question", "name": "How large is GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA is a decoder-only Transformer with about 350 million parameters, 24 layers, a model dimension of 1280, a context window of 1024 tokens (~4000 nucleotides), and a byte-pair-encoding (BPE) tokenizer with a vocabulary size of 1024."}},
+      {"@type": "Question", "name": "Can I use and modify GenerRNA freely?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GenerRNA's code and weights are released under the MIT License, so you are free to use, modify, fine-tune, and build on it, including for commercial use. The weights are on Hugging Face (pfnet/GenerRNA) and the code is on GitHub (github.com/ekkkkki/GenerRNA)."}},
       {"@type": "Question", "name": "Where can I download GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "The model weights are hosted on Hugging Face at pfnet/GenerRNA. The code and documentation are mirrored on GitHub at github.com/ekkkkki/GenerRNA. A CUDA GPU with at least 8 GB VRAM is recommended."}},
-      {"@type": "Question", "name": "Is GenerRNA open source?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GenerRNA's code and weights are released under the MIT License and are freely available for research use."}},
-      {"@type": "Question", "name": "Who developed GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA was developed by Yichong Zhao, Kenta Oono, Hiroki Takizawa, and Masaaki Kotera at Preferred Networks, Inc. and The University of Tokyo, and published in PLOS ONE in 2024."}},
+      {"@type": "Question", "name": "Who developed GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA was developed by Yichong Zhao, Kenta Oono, Hiroki Takizawa, and Masaaki Kotera, and published in PLOS ONE in 2024."}},
       {"@type": "Question", "name": "How do I cite GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "Zhao Y, Oono K, Takizawa H, Kotera M (2024) GenerRNA: A generative pre-trained language model for de novo RNA design. PLOS ONE 19(10): e0310814. https://doi.org/10.1371/journal.pone.0310814"}}
     ]
   }
@@ -164,6 +164,8 @@
     .btn { display:inline-block; padding:12px 20px; border-radius:10px; font-weight:600; }
     .btn-primary { background:#fff; color:var(--brand); }
     .btn-ghost { background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.5); }
+    .btn-solid { background:var(--brand); color:#fff; }
+    .btn-outline { background:var(--soft); color:var(--brand); border:1px solid var(--line); }
     .btn:hover { text-decoration:none; transform:translateY(-1px); }
     main section { padding:42px 0; border-bottom:1px solid var(--line); }
     h2 { font-size:1.5rem; margin:0 0 16px; }
@@ -188,6 +190,7 @@
     .faq dt { font-weight:600; margin-top:16px; }
     .faq dd { margin:4px 0 0; color:var(--muted); }
     .note { background:#fff8e6; border:1px solid #f1d99b; border-radius:10px; padding:14px 16px; }
+    .citebox { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
     footer { padding:30px 0 50px; color:var(--muted); font-size:14px; text-align:center; }
     footer a { color:var(--muted); }
   </style>
@@ -195,13 +198,14 @@
 <body>
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow">PLOS ONE · 2024 · Preferred Networks &amp; The University of Tokyo</p>
+      <p class="eyebrow">Open-source · MIT licensed · Generative model for RNA design</p>
       <h1>GenerRNA</h1>
       <p class="tagline">A generative pre-trained language model for <em>de&nbsp;novo</em> RNA design — generate novel RNA sequences with no structural input required.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://huggingface.co/pfnet/GenerRNA">🤗 Get the model on Hugging Face</a>
-        <a class="btn btn-ghost" href="https://doi.org/10.1371/journal.pone.0310814">📄 Read the paper</a>
+        <a class="btn btn-primary" href="https://huggingface.co/pfnet/GenerRNA">🤗 Get the model</a>
         <a class="btn btn-ghost" href="https://github.com/ekkkkki/GenerRNA">💻 Code on GitHub</a>
+        <a class="btn btn-ghost" href="https://doi.org/10.1371/journal.pone.0310814">📄 Read the paper</a>
+        <a class="btn btn-ghost" href="#cite">📑 Cite this work</a>
       </div>
     </div>
   </header>
@@ -217,7 +221,7 @@
           <div><dt>Context</dt><dd>1024 tokens (~4000 nucleotides)</dd></div>
           <div><dt>Training data</dt><dd>~16M sequences / ~17.4B nucleotides (RNAcentral)</dd></div>
           <div><dt>Input needed</dt><dd>None — no structure or alignment</dd></div>
-          <div><dt>License</dt><dd>MIT (open source)</dd></div>
+          <div><dt>License</dt><dd>MIT (free to use &amp; modify)</dd></div>
           <div><dt>Published</dt><dd>PLOS ONE 19(10):e0310814 (2024)</dd></div>
         </dl>
       </div>
@@ -289,6 +293,22 @@ python sampling.py --out_path generated.txt --max_new_tokens 256 \
     --ckpt_path model_updated.pt --tokenizer_path tokenizer</code></pre>
     </section>
 
+    <section id="build">
+      <h2>Build on GenerRNA</h2>
+      <p class="lead">GenerRNA is <strong>MIT-licensed</strong> — you are free to use, modify, fine-tune, and build on it, including for commercial work. It's meant to be a starting point, not a black box.</p>
+      <ul class="features">
+        <li>🔧 <strong>Fine-tune for your target</strong> — adapt GenerRNA to a specific RNA family or function with your own data.</li>
+        <li>🧪 <strong>Design functional RNA</strong> — e.g., aptamers or protein binders (ELAVL1 and SRSF1 demonstrated in the paper).</li>
+        <li>🧱 <strong>Use as a backbone</strong> — a pre-trained foundation for downstream RNA modeling and design tasks.</li>
+        <li>🔁 <strong>Reproduce &amp; extend</strong> — code, tokenizer, and the data behind the paper's figures are all open.</li>
+      </ul>
+      <p style="margin-top:18px;">
+        <a class="btn btn-solid" href="https://github.com/ekkkkki/GenerRNA">⑂ Fork &amp; build on GitHub</a>
+        &nbsp;
+        <a class="btn btn-outline" href="https://github.com/ekkkkki/GenerRNA#training--fine-tuning">📘 Fine-tuning guide</a>
+      </p>
+    </section>
+
     <section id="faq">
       <h2>Frequently asked questions</h2>
       <dl class="faq">
@@ -304,20 +324,19 @@ python sampling.py --out_path generated.txt --max_new_tokens 256 \
         <dd>About 16 million RNA sequences (~17.4 billion nucleotides) derived from RNAcentral release 22 and deduplicated with MMseqs2 at 80% sequence identity.</dd>
         <dt>How large is GenerRNA?</dt>
         <dd>~350 million parameters, 24 layers, model dimension 1280, a 1024-token context window (~4000 nucleotides), and a BPE tokenizer with vocabulary size 1024.</dd>
+        <dt>Can I use and modify GenerRNA freely?</dt>
+        <dd>Yes — the code and weights are MIT-licensed, so you can use, modify, fine-tune, and build on it (including commercially).</dd>
         <dt>Where can I download GenerRNA?</dt>
         <dd>The model weights are on Hugging Face: <a href="https://huggingface.co/pfnet/GenerRNA">pfnet/GenerRNA</a>. Code and docs are on <a href="https://github.com/ekkkkki/GenerRNA">GitHub</a>.</dd>
-        <dt>Is GenerRNA open source?</dt>
-        <dd>Yes — the code and weights are released under the MIT License for research use.</dd>
-        <dt>Who developed GenerRNA?</dt>
-        <dd>Yichong Zhao, Kenta Oono, Hiroki Takizawa, and Masaaki Kotera, at Preferred Networks, Inc. and The University of Tokyo (PLOS ONE, 2024).</dd>
         <dt>How do I cite GenerRNA?</dt>
-        <dd>See the citation below, or use the BibTeX in the repositories.</dd>
+        <dd>See the citation below, or use the BibTeX in the repository.</dd>
       </dl>
     </section>
 
     <section id="cite">
-      <h2>Citation</h2>
-      <p>If you use GenerRNA, please cite:</p>
+      <h2>Cite this work</h2>
+      <p>Found GenerRNA useful in your research or software? Please cite the paper — it's the best way to support the project and help others discover it.</p>
+      <div class="citebox">
       <pre><code>@article{zhao2024generrna,
   title     = {GenerRNA: A generative pre-trained language model for de novo RNA design},
   author    = {Zhao, Yichong and Oono, Kenta and Takizawa, Hiroki and Kotera, Masaaki},
@@ -329,7 +348,8 @@ python sampling.py --out_path generated.txt --max_new_tokens 256 \
   doi       = {10.1371/journal.pone.0310814},
   publisher = {Public Library of Science}
 }</code></pre>
-      <p class="lead">Zhao Y, Oono K, Takizawa H, Kotera M (2024) GenerRNA: A generative pre-trained language model for <em>de novo</em> RNA design. PLOS ONE 19(10): e0310814. <a href="https://doi.org/10.1371/journal.pone.0310814">https://doi.org/10.1371/journal.pone.0310814</a></p>
+      <p class="lead" style="margin-bottom:0;">Zhao Y, Oono K, Takizawa H, Kotera M (2024) GenerRNA: A generative pre-trained language model for <em>de novo</em> RNA design. PLOS ONE 19(10): e0310814. <a href="https://doi.org/10.1371/journal.pone.0310814">https://doi.org/10.1371/journal.pone.0310814</a></p>
+      </div>
     </section>
   </main>
 
@@ -342,7 +362,7 @@ python sampling.py --out_path generated.txt --max_new_tokens 256 \
         <a href="https://doi.org/10.1101/2024.02.01.578496">Preprint (bioRxiv)</a> ·
         <a href="https://ekkkkki.github.io/GenerRNA/llms.txt">llms.txt</a>
       </p>
-      <p>GenerRNA is released under the MIT License. © 2024 Yichong Zhao, Masaaki Kotera, Kenta Oono, Hiroki Takizawa · Developed at Preferred Networks, Inc. and The University of Tokyo.</p>
+      <p>GenerRNA is released under the MIT License. © 2024 Yichong Zhao, Masaaki Kotera, Kenta Oono, Hiroki Takizawa.</p>
     </div>
   </footer>
 </body>
