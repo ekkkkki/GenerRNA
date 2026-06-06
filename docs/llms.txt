@@ -1,0 +1,24 @@
+# GenerRNA
+
+> GenerRNA is a generative pre-trained language model for de novo RNA design — a decoder-only Transformer (GPT-style) that generates novel RNA sequences without requiring structural input, functional labels, or sequence alignments. Published in PLOS ONE (2024). Developed by Preferred Networks, Inc. and The University of Tokyo. To our knowledge, it is the first application of a generative language model to RNA generation.
+
+## Key facts
+
+- Type: generative language model (decoder-only Transformer, GPT-style).
+- Size: ~350 million parameters, 24 layers, model dimension 1280, 1024-token context window (~4000 nucleotides), BPE tokenizer with vocabulary size 1024.
+- Training data: ~16 million RNA sequences (~17.4 billion nucleotides) derived from RNAcentral release 22, deduplicated with MMseqs2 at 80% sequence identity.
+- Capabilities: zero-shot de novo RNA generation; fine-tuning for specific families or functions (e.g., RNA with high binding affinity to the proteins ELAVL1 and SRSF1).
+- License: MIT (open source). Weights hosted on Hugging Face; code and docs on GitHub.
+
+## Links
+
+- Model and weights (Hugging Face): https://huggingface.co/pfnet/GenerRNA
+- Code and documentation (GitHub): https://github.com/ekkkkki/GenerRNA
+- Paper (PLOS ONE): https://doi.org/10.1371/journal.pone.0310814
+- Preprint (bioRxiv): https://doi.org/10.1101/2024.02.01.578496
+- PubMed: https://pubmed.ncbi.nlm.nih.gov/39352899/
+- Project page: https://ekkkkki.github.io/GenerRNA/
+
+## Citation
+
+Zhao Y, Oono K, Takizawa H, Kotera M (2024) GenerRNA: A generative pre-trained language model for de novo RNA design. PLOS ONE 19(10): e0310814. https://doi.org/10.1371/journal.pone.0310814

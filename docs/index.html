@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GenerRNA — A Generative Language Model for de novo RNA Design</title>
   <meta name="description" content="GenerRNA is a generative pre-trained language model (a decoder-only Transformer) for de novo RNA design. It generates novel RNA sequences zero-shot or after fine-tuning, with no structural input required. Open-source, MIT-licensed, published in PLOS ONE (2024).">
-  <meta name="keywords" content="GenerRNA, RNA design, de novo RNA design, generative model, RNA language model, RNA generation, transformer, GPT, deep learning, computational biology, bioinformatics, drug discovery, RNA aptamer, Preferred Networks">
+  <meta name="keywords" content="GenerRNA, RNA design, de novo RNA design, generative model, RNA language model, RNA generation, transformer, GPT, deep learning, computational biology, bioinformatics, drug discovery, RNA aptamer, protein-binding RNA, Preferred Networks">
   <meta name="author" content="Yichong Zhao, Kenta Oono, Hiroki Takizawa, Masaaki Kotera">
+  <meta name="theme-color" content="#0b6bcb">
   <link rel="canonical" href="https://ekkkkki.github.io/GenerRNA/">
-  <meta name="robots" content="index, follow">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -35,9 +37,11 @@
   <meta name="citation_issue" content="10">
   <meta name="citation_firstpage" content="e0310814">
   <meta name="citation_doi" content="10.1371/journal.pone.0310814">
+  <meta name="citation_pmid" content="39352899">
+  <meta name="citation_language" content="en">
+  <meta name="citation_keywords" content="RNA design; generative model; language model; transformer; de novo design; bioinformatics">
   <meta name="citation_pdf_url" content="https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0310814&type=printable">
   <meta name="citation_abstract_html_url" content="https://doi.org/10.1371/journal.pone.0310814">
-  <meta name="citation_fulltext_world_readable" content="">
 
   <!-- Structured data: scholarly article -->
   <script type="application/ld+json">
@@ -53,13 +57,29 @@
       {"@type": "Person", "name": "Masaaki Kotera", "affiliation": {"@type": "Organization", "name": "Preferred Networks, Inc."}}
     ],
     "datePublished": "2024-10-01",
-    "isPartOf": {"@type": "Periodical", "name": "PLOS ONE", "issn": "1932-6203"},
+    "isPartOf": {
+      "@type": "PublicationIssue",
+      "issueNumber": "10",
+      "datePublished": "2024-10-01",
+      "isPartOf": {
+        "@type": "PublicationVolume",
+        "volumeNumber": "19",
+        "isPartOf": {"@type": "Periodical", "name": "PLOS ONE", "issn": "1932-6203"}
+      }
+    },
     "publisher": {"@type": "Organization", "name": "Public Library of Science"},
-    "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1371/journal.pone.0310814"},
+    "pagination": "e0310814",
+    "identifier": [
+      {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1371/journal.pone.0310814"},
+      {"@type": "PropertyValue", "propertyID": "PMID", "value": "39352899"},
+      {"@type": "PropertyValue", "propertyID": "PMCID", "value": "PMC11444397"}
+    ],
     "url": "https://ekkkkki.github.io/GenerRNA/",
     "sameAs": [
       "https://doi.org/10.1371/journal.pone.0310814",
       "https://doi.org/10.1101/2024.02.01.578496",
+      "https://pubmed.ncbi.nlm.nih.gov/39352899/",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11444397/",
       "https://huggingface.co/pfnet/GenerRNA",
       "https://github.com/ekkkkki/GenerRNA"
     ],
@@ -89,6 +109,25 @@
   }
   </script>
 
+  <!-- Structured data: training dataset -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "GenerRNA pre-training corpus (RNAcentral-derived)",
+    "description": "Approximately 16 million RNA sequences (~17.4 billion nucleotides) derived from RNAcentral release 22 and deduplicated with MMseqs2 at 80% sequence identity, used to pre-train GenerRNA.",
+    "isBasedOn": "https://rnacentral.org/",
+    "license": "https://opensource.org/licenses/MIT",
+    "citation": "https://doi.org/10.1371/journal.pone.0310814",
+    "creator": [
+      {"@type": "Person", "name": "Yichong Zhao"},
+      {"@type": "Person", "name": "Kenta Oono"},
+      {"@type": "Person", "name": "Hiroki Takizawa"},
+      {"@type": "Person", "name": "Masaaki Kotera"}
+    ]
+  }
+  </script>
+
   <!-- Structured data: FAQ -->
   <script type="application/ld+json">
   {
@@ -96,9 +135,14 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type": "Question", "name": "What is GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA is a generative, pre-trained language model (a decoder-only Transformer) that designs novel RNA sequences de novo, without requiring structural information, functional labels, or sequence alignments. It was introduced in PLOS ONE (2024)."}},
+      {"@type": "Question", "name": "Can AI design RNA sequences?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GenerRNA is a generative AI model that designs novel RNA sequences de novo. It learns the patterns of natural RNA from millions of sequences and then samples entirely new, realistic sequences that fold into stable secondary structures."}},
       {"@type": "Question", "name": "How is GenerRNA different from other RNA models?", "acceptedAnswer": {"@type": "Answer", "text": "Most RNA models are discriminative — they predict structure or properties from a given sequence. GenerRNA is generative: it samples entirely new sequences. To our knowledge, it is the first application of a generative language model to RNA generation."}},
-      {"@type": "Question", "name": "How can I use or download GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "The model weights are hosted on Hugging Face at pfnet/GenerRNA. The code and documentation are mirrored on GitHub at github.com/ekkkkki/GenerRNA. A CUDA GPU with at least 8 GB VRAM is recommended."}},
-      {"@type": "Question", "name": "Can I generate RNAs from a specific family or with a specific function?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Fine-tune GenerRNA on a family- or function-specific dataset. The paper demonstrates designing RNAs with high binding affinity to the RNA-binding proteins ELAVL1 and SRSF1."}},
+      {"@type": "Question", "name": "How can I design RNA that binds a target protein?", "acceptedAnswer": {"@type": "Answer", "text": "Fine-tune GenerRNA on a dataset specific to your target. In the paper, GenerRNA was fine-tuned to design RNA with high binding affinity to the RNA-binding proteins ELAVL1 and SRSF1."}},
+      {"@type": "Question", "name": "What data was GenerRNA trained on?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA was pre-trained on about 16 million RNA sequences (~17.4 billion nucleotides) derived from RNAcentral release 22 and deduplicated with MMseqs2 at 80% sequence identity."}},
+      {"@type": "Question", "name": "How large is GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA is a decoder-only Transformer with about 350 million parameters, 24 layers, a model dimension of 1280, a context window of 1024 tokens (~4000 nucleotides), and a byte-pair-encoding (BPE) tokenizer with a vocabulary size of 1024."}},
+      {"@type": "Question", "name": "Where can I download GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "The model weights are hosted on Hugging Face at pfnet/GenerRNA. The code and documentation are mirrored on GitHub at github.com/ekkkkki/GenerRNA. A CUDA GPU with at least 8 GB VRAM is recommended."}},
+      {"@type": "Question", "name": "Is GenerRNA open source?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GenerRNA's code and weights are released under the MIT License and are freely available for research use."}},
+      {"@type": "Question", "name": "Who developed GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA was developed by Yichong Zhao, Kenta Oono, Hiroki Takizawa, and Masaaki Kotera at Preferred Networks, Inc. and The University of Tokyo, and published in PLOS ONE in 2024."}},
       {"@type": "Question", "name": "How do I cite GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "Zhao Y, Oono K, Takizawa H, Kotera M (2024) GenerRNA: A generative pre-trained language model for de novo RNA design. PLOS ONE 19(10): e0310814. https://doi.org/10.1371/journal.pone.0310814"}}
     ]
   }
@@ -125,11 +169,20 @@
     h2 { font-size:1.5rem; margin:0 0 16px; }
     h3 { font-size:1.05rem; margin:22px 0 6px; }
     .lead { color:var(--muted); }
+    .glance { background:var(--soft); border:1px solid var(--line); border-radius:14px; padding:20px 22px; margin-top:-22px; }
+    .glance h2 { font-size:1.15rem; margin:0 0 12px; }
+    .glance dl { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px 22px; margin:0; }
+    .glance dt { font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
+    .glance dd { margin:0 0 8px; font-weight:600; }
     ul.features { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
     ul.features li { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
     table { width:100%; border-collapse:collapse; }
     th,td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
-    th { width:38%; color:var(--muted); font-weight:600; }
+    th { color:var(--muted); font-weight:600; }
+    .compare th, .compare td { font-size:14px; }
+    .compare thead th { color:var(--ink); border-bottom:2px solid var(--line); }
+    .compare td:first-child { color:var(--muted); width:30%; }
+    .kv th { width:38%; }
     pre { background:#0f172a; color:#e2e8f0; padding:16px; border-radius:10px; overflow:auto; font-size:13px; }
     code { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
     .faq dt { font-weight:600; margin-top:16px; }
@@ -154,6 +207,22 @@
   </header>
 
   <main class="wrap">
+    <section id="glance" style="border-bottom:none; padding-bottom:8px;">
+      <div class="glance">
+        <h2>GenerRNA at a glance</h2>
+        <dl>
+          <div><dt>What it is</dt><dd>Generative RNA language model (GPT-style Transformer)</dd></div>
+          <div><dt>What it does</dt><dd>Designs novel RNA sequences de novo</dd></div>
+          <div><dt>Parameters</dt><dd>~350M · 24 layers · dim 1280</dd></div>
+          <div><dt>Context</dt><dd>1024 tokens (~4000 nucleotides)</dd></div>
+          <div><dt>Training data</dt><dd>~16M sequences / ~17.4B nucleotides (RNAcentral)</dd></div>
+          <div><dt>Input needed</dt><dd>None — no structure or alignment</dd></div>
+          <div><dt>License</dt><dd>MIT (open source)</dd></div>
+          <div><dt>Published</dt><dd>PLOS ONE 19(10):e0310814 (2024)</dd></div>
+        </dl>
+      </div>
+    </section>
+
     <section id="about">
       <h2>What is GenerRNA?</h2>
       <p class="lead"><strong>GenerRNA is a generative pre-trained language model for <em>de novo</em> RNA sequence design.</strong> It is a Transformer (decoder-only, GPT-style) model that learns the "language" of RNA from millions of natural sequences and can generate novel, realistic RNA sequences <strong>without any structural input, functional label, or sequence alignment</strong>. To our knowledge, GenerRNA is the first application of a generative language model to RNA generation.</p>
@@ -172,9 +241,27 @@
       </ul>
     </section>
 
+    <section id="compare">
+      <h2>How GenerRNA's approach differs</h2>
+      <p class="lead">GenerRNA is <em>generative</em>, which sets it apart from the predictive and alignment-based paradigms commonly used for RNA.</p>
+      <table class="compare">
+        <thead>
+          <tr><th>&nbsp;</th><th>GenerRNA (generative LM)</th><th>Structure / property predictors</th><th>Alignment / covariance models</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primary goal</td><td>Generate novel sequences</td><td>Predict structure or properties from a sequence</td><td>Model a known family from an alignment</td></tr>
+          <tr><td>Produces entirely new sequences</td><td>Yes</td><td>No</td><td>Limited (within-family)</td></tr>
+          <tr><td>Needs structure / alignment as input</td><td>No</td><td>Often</td><td>Yes (MSA)</td></tr>
+          <tr><td>Prior family knowledge required</td><td>No (zero-shot) or optional (fine-tune)</td><td>—</td><td>Yes</td></tr>
+          <tr><td>Core method</td><td>Decoder-only Transformer trained on ~16M sequences</td><td>Varies (CNN/Transformer/thermodynamic)</td><td>Statistical / covariance</td></tr>
+        </tbody>
+      </table>
+      <p class="lead" style="font-size:13px; margin-top:10px;">Comparison of paradigms, not specific tools; characteristics for GenerRNA are from the PLOS ONE (2024) paper.</p>
+    </section>
+
     <section id="details">
       <h2>Model details</h2>
-      <table>
+      <table class="kv">
         <tr><th>Model type</th><td>Generative language model (decoder-only Transformer, GPT-style)</td></tr>
         <tr><th>Domain</th><td>RNA / nucleotide sequences</td></tr>
         <tr><th>Parameters</th><td>350M (24 transformer layers, model dimension 1280)</td></tr>
@@ -207,12 +294,24 @@ python sampling.py --out_path generated.txt --max_new_tokens 256 \
       <dl class="faq">
         <dt>What is GenerRNA?</dt>
         <dd>A generative, pre-trained language model (a decoder-only Transformer) that designs novel RNA sequences <em>de novo</em>, without requiring structural information, functional labels, or sequence alignments.</dd>
+        <dt>Can AI design RNA sequences?</dt>
+        <dd>Yes. GenerRNA is a generative AI model that designs novel RNA sequences de novo — it learns from millions of natural RNAs and samples new, realistic sequences that fold into stable secondary structures.</dd>
         <dt>How is GenerRNA different from other RNA models?</dt>
         <dd>Most RNA models are <em>discriminative</em> (they predict structure or properties). GenerRNA is <em>generative</em>: it samples entirely new sequences. To our knowledge, it is the first application of a generative language model to RNA generation.</dd>
-        <dt>Where are the model weights?</dt>
-        <dd>On Hugging Face: <a href="https://huggingface.co/pfnet/GenerRNA">pfnet/GenerRNA</a>. The <a href="https://github.com/ekkkkki/GenerRNA">GitHub repository</a> hosts the code and documentation.</dd>
-        <dt>Can I generate RNAs from a specific family or function?</dt>
-        <dd>Yes — fine-tune GenerRNA on a family- or function-specific dataset. The paper demonstrates designing RNAs with high binding affinity to the proteins ELAVL1 and SRSF1.</dd>
+        <dt>How can I design RNA that binds a target protein?</dt>
+        <dd>Fine-tune GenerRNA on a target-specific dataset. The paper demonstrates designing RNA with high binding affinity to the RNA-binding proteins ELAVL1 and SRSF1.</dd>
+        <dt>What data was GenerRNA trained on?</dt>
+        <dd>About 16 million RNA sequences (~17.4 billion nucleotides) derived from RNAcentral release 22 and deduplicated with MMseqs2 at 80% sequence identity.</dd>
+        <dt>How large is GenerRNA?</dt>
+        <dd>~350 million parameters, 24 layers, model dimension 1280, a 1024-token context window (~4000 nucleotides), and a BPE tokenizer with vocabulary size 1024.</dd>
+        <dt>Where can I download GenerRNA?</dt>
+        <dd>The model weights are on Hugging Face: <a href="https://huggingface.co/pfnet/GenerRNA">pfnet/GenerRNA</a>. Code and docs are on <a href="https://github.com/ekkkkki/GenerRNA">GitHub</a>.</dd>
+        <dt>Is GenerRNA open source?</dt>
+        <dd>Yes — the code and weights are released under the MIT License for research use.</dd>
+        <dt>Who developed GenerRNA?</dt>
+        <dd>Yichong Zhao, Kenta Oono, Hiroki Takizawa, and Masaaki Kotera, at Preferred Networks, Inc. and The University of Tokyo (PLOS ONE, 2024).</dd>
+        <dt>How do I cite GenerRNA?</dt>
+        <dd>See the citation below, or use the BibTeX in the repositories.</dd>
       </dl>
     </section>
 
@@ -240,7 +339,8 @@ python sampling.py --out_path generated.txt --max_new_tokens 256 \
         <a href="https://huggingface.co/pfnet/GenerRNA">Hugging Face</a> ·
         <a href="https://github.com/ekkkkki/GenerRNA">GitHub</a> ·
         <a href="https://doi.org/10.1371/journal.pone.0310814">Paper (PLOS ONE)</a> ·
-        <a href="https://doi.org/10.1101/2024.02.01.578496">Preprint (bioRxiv)</a>
+        <a href="https://doi.org/10.1101/2024.02.01.578496">Preprint (bioRxiv)</a> ·
+        <a href="https://ekkkkki.github.io/GenerRNA/llms.txt">llms.txt</a>
       </p>
       <p>GenerRNA is released under the MIT License. © 2024 Yichong Zhao, Masaaki Kotera, Kenta Oono, Hiroki Takizawa · Developed at Preferred Networks, Inc. and The University of Tokyo.</p>
     </div>
