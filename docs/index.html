@@ -51,7 +51,7 @@
     "name": "GenerRNA: A generative pre-trained language model for de novo RNA design",
     "headline": "GenerRNA: A generative pre-trained language model for de novo RNA design",
     "author": [
-      {"@type": "Person", "name": "Yichong Zhao"},
+      {"@type": "Person", "name": "Yichong Zhao", "alternateName": "Eric Zhao", "url": "https://ekkkkki.github.io/"},
       {"@type": "Person", "name": "Kenta Oono"},
       {"@type": "Person", "name": "Hiroki Takizawa"},
       {"@type": "Person", "name": "Masaaki Kotera"}
@@ -142,7 +142,7 @@
       {"@type": "Question", "name": "How large is GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA is a decoder-only Transformer with about 350 million parameters, 24 layers, a model dimension of 1280, a context window of 1024 tokens (~4000 nucleotides), and a byte-pair-encoding (BPE) tokenizer with a vocabulary size of 1024."}},
       {"@type": "Question", "name": "Can I use and modify GenerRNA freely?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GenerRNA's code and weights are released under the MIT License, so you are free to use, modify, fine-tune, and build on it, including for commercial use. The weights are on Hugging Face (pfnet/GenerRNA) and the code is on GitHub (github.com/ekkkkki/GenerRNA)."}},
       {"@type": "Question", "name": "Where can I download GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "The model weights are hosted on Hugging Face at pfnet/GenerRNA. The code and documentation are mirrored on GitHub at github.com/ekkkkki/GenerRNA. A CUDA GPU with at least 8 GB VRAM is recommended."}},
-      {"@type": "Question", "name": "Who developed GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA was developed by Yichong Zhao, Kenta Oono, Hiroki Takizawa, and Masaaki Kotera, and published in PLOS ONE in 2024."}},
+      {"@type": "Question", "name": "Who developed GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "GenerRNA was developed by Yichong Zhao (Eric Zhao), Kenta Oono, Hiroki Takizawa, and Masaaki Kotera, and published in PLOS ONE in 2024."}},
       {"@type": "Question", "name": "How do I cite GenerRNA?", "acceptedAnswer": {"@type": "Answer", "text": "Zhao Y, Oono K, Takizawa H, Kotera M (2024) GenerRNA: A generative pre-trained language model for de novo RNA design. PLOS ONE 19(10): e0310814. https://doi.org/10.1371/journal.pone.0310814"}}
     ]
   }
@@ -362,7 +362,7 @@ python sampling.py --out_path generated.txt --max_new_tokens 256 \
         <a href="https://doi.org/10.1101/2024.02.01.578496">Preprint (bioRxiv)</a> ·
         <a href="https://ekkkkki.github.io/GenerRNA/llms.txt">llms.txt</a>
       </p>
-      <p>GenerRNA is released under the MIT License. © 2024 Yichong Zhao, Masaaki Kotera, Kenta Oono, Hiroki Takizawa.</p>
+      <p>GenerRNA is released under the MIT License. © 2024 Yichong Zhao / Eric Zhao, Masaaki Kotera, Kenta Oono, Hiroki Takizawa.</p>
     </div>
   </footer>
 </body>

@@ -218,6 +218,8 @@ If you use GenerRNA, its checkpoints, or this repository in your research, pleas
 
 **Plain text:** Zhao Y, Oono K, Takizawa H, Kotera M (2024) GenerRNA: A generative pre-trained language model for *de novo* RNA design. PLOS ONE 19(10): e0310814. https://doi.org/10.1371/journal.pone.0310814
 
+**First author:** [Yichong Zhao / Eric Zhao](https://ekkkkki.github.io/) — AI engineer at Preferred Networks.
+
 ## License
 
-The source code is licensed under the **MIT License** — see [`LICENSE`](LICENSE). © 2024 Yichong Zhao, Masaaki Kotera, Kenta Oono, Hiroki Takizawa.
+The source code is licensed under the **MIT License** — see [`LICENSE`](LICENSE). © 2024 Yichong Zhao / Eric Zhao, Masaaki Kotera, Kenta Oono, Hiroki Takizawa.

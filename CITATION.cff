@@ -10,6 +10,7 @@ type: software
 authors:
   - family-names: Zhao
     given-names: Yichong
+    alias: "Eric Zhao"
   - family-names: Oono
     given-names: Kenta
   - family-names: Takizawa
